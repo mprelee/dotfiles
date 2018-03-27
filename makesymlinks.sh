@@ -8,24 +8,29 @@
 
 # Variables
 
-dir=~/dotfiles # dotfiles directory
-olddir=~/dotfiles_old # old dotfiles backup directory
-files="bashrc vimrc dircolors tmux.conf" # list of files/folders to symlink in homedir
+dotfiles_dir=~/dotfiles # dotfiles directory
+backup_dir=~/backup_dotfiles # old dotfiles backup directory
+files="bashrc vimrc dircolors tmux.conf atom/config.cson" # list of files/folders to symlink in homedir
+folders="atom"
 
 # create dotfiles_old in homedir
-echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
-mkdir -p $olddir
+echo -n "Creating $backup_dir for backup of any existing dotfiles in ~ ..."
+mkdir -p $backup_dir
 echo "done"
 
 # change to the dotfiles directory
-echo -n "Changing to the $dir directory ..."
-cd $dir
+echo -n "Changing to the $dotfiles_dir directory ..."
+cd $dotfiles_dir
 echo "done"
 
-# move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
+for folder in $folders; do
+    mkdir -p "$dotfiles_dir/$folder"
+    mkdir -p "$backup_dir/$folder"
+done
+
 for file in $files; do
-  echo "Moving any existing dotfiles from ~ to $olddir"
-  mv ~/.$file ~/dotfiles_old/
+  echo "Moving any existing dotfiles from ~ to $backup_dir"
+  mv ~/.$file $backup_dir/
   echo "Creating symlink to $file in home directory."
-  ln -s $dir/$file ~/.$file
+  ln -s $dotfiles_dir/$file ~/.$file
 done

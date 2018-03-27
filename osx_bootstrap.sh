@@ -96,10 +96,13 @@ brew tap caskroom/cask
 CASKS=(
     1password
     atom
+    bartender
+    coronasdk
     google-chrome
     iterm2
     macvim
     moom
+    steam
     vlc
     xquartz
 )

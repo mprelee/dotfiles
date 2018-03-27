@@ -1,5 +1,0 @@
-alias ll="ls -lac"
-
-
-
-
