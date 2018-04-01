@@ -63,6 +63,7 @@ PACKAGES=(
     jq
     libjpeg
     libmemcached 
+    lua
     lynx
     markdown
     memcached
@@ -80,6 +81,7 @@ PACKAGES=(
     the_silver_searcher
     tmux
     tree
+    unrar
     vim
     wget
 )

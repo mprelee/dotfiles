@@ -34,6 +34,7 @@ Plugin 'luochen1990/rainbow'
 Plugin 'davidhalter/jedi-vim'
 "Plugin 'ervandew/supertab'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'leafo/moonscript-vim'
 
 
 " All of your Plugins must be added before the following line
@@ -212,3 +213,6 @@ let g:NERDCommentEmptyLines = 1
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 let g:rainbow_active = 1 
 
+" Start the Corna Simulator with F3 for iPhone skin. Shift-F3 for iPad skin.
+map  :!/Applications/CoronaSDK/simulator -project %:p -skin iPhone
+map  :!/Applications/CoronaSDK/simulator -project %:p -skin iPad
