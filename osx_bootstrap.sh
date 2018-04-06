@@ -100,6 +100,7 @@ CASKS=(
     atom
     bartender
     coronasdk
+    gimp
     google-chrome
     iterm2
     macvim
