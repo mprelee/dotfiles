@@ -58,6 +58,7 @@ PACKAGES=(
     gifsicle
     git
     graphviz
+    gtk+
     hub
     imagemagick
     jq
