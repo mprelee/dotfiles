@@ -69,6 +69,7 @@ PACKAGES=(
     markdown
     memcached
     mercurial
+    node
     npm
     pkg-config
     postgresql
