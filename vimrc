@@ -32,9 +32,12 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'luochen1990/rainbow'
 Plugin 'davidhalter/jedi-vim'
-"Plugin 'ervandew/supertab'
+Plugin 'ervandew/supertab'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'leafo/moonscript-vim'
+Plugin 'calviken/vim-gdscript3'
+Plugin 'sirtaj/vim-openscad'
+Plugin 'udalov/kotlin-vim'
 
 
 " All of your Plugins must be added before the following line
@@ -161,13 +164,14 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_python_python_exec = 'python' 
+let g:syntastic_mode_map = { 'passive_filetypes': ['python'] }
+"let g:syntastic_python_python_exec = 'python' 
 "let g:syntastic_scala_checkers = ['scalac']
 "let g:syntastic_scala_checkers = ['fsc']
 "let g:syntastic_scala_checkers = []
 
 
-let g:syntastic_python_checkers = ['pyflakes']
+"let g:syntastic_python_checkers = ['#pyflakes']
 
 " Passive for scala
 "g:syntastic_scala_scalastyle_config_file = 'scalastyle_config.xml'

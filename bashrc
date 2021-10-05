@@ -18,3 +18,9 @@ fi
 
 # http://bashrcgenerator.com/
 export PS1="\[\033[38;5;33m\]\u\[$(tput bold)\]\[$(tput sgr0)\]\[\033[38;5;229m\]@\[$(tput sgr0)\]\[\033[38;5;230m\]\h:\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;34m\]\W\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;28m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
+
+
+# added by travis gem
+[ -f /Users/mprelee/.travis/travis.sh ] && source /Users/mprelee/.travis/travis.sh
+
+#export PATH="/usr/local/anaconda3/bin:$PATH"
